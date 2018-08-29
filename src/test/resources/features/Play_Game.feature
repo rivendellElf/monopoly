@@ -20,6 +20,7 @@ Scenario Outline: Join Monopol Game
     And the dice value is <diceValue>   
     Then the new Position is <newPosition> 
 
+
     
 	
 	Examples: 
