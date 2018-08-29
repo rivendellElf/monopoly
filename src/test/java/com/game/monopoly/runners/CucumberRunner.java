@@ -1,5 +1,5 @@
 
-package com.aliexpress.runners;
+package com.game.monopoly.runners;
 
 import org.junit.runner.RunWith;
 
@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
         glue="com.chase.steps",
          tags = "@Actions",
          dryRun=true)
-public class CukesRunner{
+public class CucumberRunner{
 	
 
 }
