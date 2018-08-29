@@ -53,6 +53,4 @@ public class MonopolyTest {
 	public void the_new_Position_is(int newPosition) throws Throwable {
 	    this.newPosition=newPosition;
 	}
-
-
 }
