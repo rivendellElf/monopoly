@@ -1,1 +1,8 @@
-/target/
+*.iml
+.project
+.settings/
+.classpath
+target/
+.springBeans
+.factorypath
+.DS_Store
