@@ -10,10 +10,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		
 		plugin ="html:target/cucumber-reports",
-		features = "src/test/resources/features/Play_Game.feature",
-        glue="com.chase.steps",
-         tags = "@Actions",
-         dryRun=true)
+		features = "src/test/resources/features",
+        glue="com.game.monopoly.steps",
+         tags = "@Player")
+
 public class CucumberRunner{
 	
 
