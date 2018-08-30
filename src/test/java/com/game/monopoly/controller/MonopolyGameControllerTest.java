@@ -10,13 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.game.monopoly.model.GameSetup;
+import com.game.monopoly.service.PlayerService;
 
+import mockit.Injectable;
 import mockit.Tested;
 
 public class MonopolyGameControllerTest {
 
 	@Tested
 	private MonopolyGameController tested;
+
+	@Injectable
+	private PlayerService playerServiceMock;
 
 	@Test
 	public void haveRestControllerAnnotation() throws Exception {
@@ -34,4 +39,10 @@ public class MonopolyGameControllerTest {
 		assertThat(MonopolyGameController.class.getMethod("initiate", GameSetup.class).getAnnotation(PostMapping.class),
 				notNullValue());
 	}
+
+	@Test
+	public void returnRoundGivenValidInitiationValues() throws Exception {
+		
+	}
+
 }

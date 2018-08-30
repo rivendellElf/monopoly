@@ -14,7 +14,7 @@ public class MonopolyGameController {
 
 	@PostMapping
 	public ResponseEntity<GameSetup> initiate(@RequestBody GameSetup gameSetup) {
-
+		
 		return null;
 	}
 
