@@ -15,3 +15,4 @@ Scenario Outline: Join Monopol Game
 		 
 		 
 		 
+		 
