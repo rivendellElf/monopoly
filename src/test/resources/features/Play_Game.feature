@@ -12,6 +12,7 @@ Scenario Outline: Join Monopol Game
 		 |numberOfPlayers|numberOfRounds|responseMessage|
 		 | 8             |  20          |  success      |
 		 | 11            |  9           |  success      |
+	
 		 
 		 
 		 
