@@ -13,3 +13,5 @@ Scenario Outline: Join Monopol Game
 		 | 8             |  20          |  success      |
 		 | 11            |  9           |  success      |
 		 
+		 
+		 
