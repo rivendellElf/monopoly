@@ -23,7 +23,7 @@ public class MonopolyGameController {
 
 		for (int i = 1; i <= gameSetup.getNumberOfRounds(); i++) {
 			for (int j = 1; j <= gameSetup.getNumberOfPlayers(); j++) {
-				playerService.rollDice(j, i);
+				playerService.rollDiceAndCalculateNewPostion(j, i);
 			}
 		}
 		return new ResponseEntity<>(null, HttpStatus.OK);

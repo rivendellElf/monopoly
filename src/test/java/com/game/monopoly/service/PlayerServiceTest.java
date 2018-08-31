@@ -28,7 +28,7 @@ public class PlayerServiceTest {
 	public void rollDiceGivenPlayerAndRoundDetails() throws Exception {
 		int player = 1;
 		int round = 2;
-		tested.rollDice(player, round);
+		tested.rollDiceAndCalculateNewPostion(player, round);
 		assertThat(diceMock.getFaceValue(), notNullValue());
 	}
 

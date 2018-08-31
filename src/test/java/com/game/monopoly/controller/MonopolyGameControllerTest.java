@@ -50,7 +50,7 @@ public class MonopolyGameControllerTest {
 
 		new Verifications() {
 			{
-				playerServiceMock.rollDice(setup.getNumberOfPlayers(), setup.getNumberOfRounds());
+				playerServiceMock.rollDiceAndCalculateNewPostion(setup.getNumberOfPlayers(), setup.getNumberOfRounds());
 			}
 		};
 	}
