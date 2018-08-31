@@ -14,6 +14,7 @@ import com.game.monopoly.service.PlayerService;
 
 import mockit.Injectable;
 import mockit.Tested;
+import mockit.Verifications;
 
 public class MonopolyGameControllerTest {
 
@@ -41,8 +42,16 @@ public class MonopolyGameControllerTest {
 	}
 
 	@Test
-	public void returnRoundGivenValidInitiationValues() throws Exception {
-		
-	}
+	public void intiateRoundGivenValidInputs() throws Exception {
+		GameSetup setup = new GameSetup();
+		setup.setNumberOfPlayers(4);
+		setup.setNumberOfRounds(10);
+		tested.initiate(setup);
 
+		new Verifications() {
+			{
+				playerServiceMock.rollDice(setup.getNumberOfPlayers(), setup.getNumberOfRounds());
+			}
+		};
+	}
 }

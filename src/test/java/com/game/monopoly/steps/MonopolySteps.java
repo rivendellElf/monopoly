@@ -9,7 +9,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.web.client.RestTemplate;
 
 import com.game.monopoly.MonopolyGameApplication;
 import com.game.monopoly.model.GameSetup;
@@ -26,8 +25,8 @@ public class MonopolySteps {
 	@Autowired
 	private TestRestTemplate template;
 
-	private String numberOfPlayers;
-	private String numberOfRounds;
+	private int numberOfPlayers;
+	private int numberOfRounds;
 	private String responseMessage;
 	private String player;
 	private String currentPosition;
@@ -42,17 +41,17 @@ public class MonopolySteps {
 	}
 
 	@When("^the player is (.*)$")
-	public void the_player_is_Tom(String numberOfPlayers) throws Throwable {
+	public void the_player_is_Tom(int numberOfPlayers) throws Throwable {
 		this.numberOfPlayers = numberOfPlayers;
 	}
 
 	@When("^the number of player is (.*)$")
-	public void the_number_of_player_is(String numberOfPlayers) throws Throwable {
+	public void the_number_of_player_is(int numberOfPlayers) throws Throwable {
 		this.numberOfPlayers = numberOfPlayers;
 	}
 
 	@And("^the number of rounds is (.*)$")
-	public void the_number_of_rounds_is(String numberOfRounds) throws Throwable {
+	public void the_number_of_rounds_is(int numberOfRounds) throws Throwable {
 		this.numberOfRounds = numberOfRounds;
 	}
 

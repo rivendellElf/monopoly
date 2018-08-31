@@ -1,9 +1,8 @@
 package com.game.monopoly.model;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
 import org.junit.Test;
+
+import com.game.monopoly.component.Dice;
 
 import mockit.Tested;
 
@@ -13,10 +12,7 @@ public class DiceTest {
 	private Dice tested;
 
 	@Test
-	public void accessFaceValue() throws Exception {
-		int faceValue = 1;
-		Dice dice = new Dice();
-		dice.setFaceValue(faceValue);
-		assertThat(dice.getFaceValue(), is(1));
+	public void returnFaceValueWhenDiceIsRolled() throws Exception {
+		tested.getFaceValue();
 	}
 }

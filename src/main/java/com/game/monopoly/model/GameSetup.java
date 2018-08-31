@@ -10,23 +10,23 @@ public class GameSetup implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String numberOfPlayers;
-	private String numberOfRounds;
+	private int numberOfPlayers;
+	private int numberOfRounds;
 	private String response;
 
-	public String getNumberOfPlayers() {
+	public int getNumberOfPlayers() {
 		return numberOfPlayers;
 	}
 
-	public void setNumberOfPlayers(String numberOfPlayers) {
+	public void setNumberOfPlayers(int numberOfPlayers) {
 		this.numberOfPlayers = numberOfPlayers;
 	}
 
-	public String getNumberOfRounds() {
+	public int getNumberOfRounds() {
 		return numberOfRounds;
 	}
 
-	public void setNumberOfRounds(String numberOfRounds) {
+	public void setNumberOfRounds(int numberOfRounds) {
 		this.numberOfRounds = numberOfRounds;
 	}
 
