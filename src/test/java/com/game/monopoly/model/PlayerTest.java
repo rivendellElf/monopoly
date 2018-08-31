@@ -1,0 +1,42 @@
+package com.game.monopoly.model;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+import org.junit.Test;
+
+import mockit.Tested;
+
+public class PlayerTest {
+
+	@Tested
+	private Player tested;
+
+	@Test
+	public void accessPlayerId() throws Exception {
+		String playerId = "p1";
+		tested.setPlayerId(playerId);
+		assertThat(tested.getPlayerId(), is(playerId));
+	}
+
+	@Test
+	public void accessCurrentPosition() throws Exception {
+		byte currentPosition = 10;
+		tested.setCurrentPosition(currentPosition);
+		assertThat(tested.getCurrentPosition(), is(currentPosition));
+	}
+
+	@Test
+	public void accessDie1FaceValue() throws Exception {
+		byte die1FaceValue = 5;
+		tested.setDie1FaceValue(die1FaceValue);
+		assertThat(tested.getDie1FaceValue(), is(die1FaceValue));
+	}
+
+	@Test
+	public void accessDie2FaceValue() throws Exception {
+		byte die2FaceValue = 5;
+		tested.setDie1FaceValue(die2FaceValue);
+		assertThat(tested.getDie1FaceValue(), is(die2FaceValue));
+	}
+}
