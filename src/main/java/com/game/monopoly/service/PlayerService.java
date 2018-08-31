@@ -15,5 +15,5 @@ public class PlayerService {
 		int firstDiceFaceValue = dice.getFaceValue();
 		int secondDiceFaceValue = dice.getFaceValue();
 	}
-
+	
 }
