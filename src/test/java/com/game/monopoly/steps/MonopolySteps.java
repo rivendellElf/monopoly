@@ -87,7 +87,7 @@ public class MonopolySteps {
 		Monopoly game = new Monopoly();
 		game.setNumberOfPlayers(numberOfPlayers);
 		game.setNumberOfRounds(numberOfRounds);
-		game.setResponse(responseMessage);
+		//game.setResponse(responseMessage);
 		return game;
 
 	}

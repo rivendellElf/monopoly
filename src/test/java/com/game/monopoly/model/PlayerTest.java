@@ -21,21 +21,21 @@ public class PlayerTest {
 
 	@Test
 	public void accessCurrentPosition() throws Exception {
-		byte currentPosition = 10;
+		int currentPosition = 10;
 		tested.setCurrentPosition(currentPosition);
 		assertThat(tested.getCurrentPosition(), is(currentPosition));
 	}
 
 	@Test
 	public void accessDie1FaceValue() throws Exception {
-		byte die1FaceValue = 5;
+		int die1FaceValue = 5;
 		tested.setDie1FaceValue(die1FaceValue);
 		assertThat(tested.getDie1FaceValue(), is(die1FaceValue));
 	}
 
 	@Test
 	public void accessDie2FaceValue() throws Exception {
-		byte die2FaceValue = 5;
+		int die2FaceValue = 5;
 		tested.setDie1FaceValue(die2FaceValue);
 		assertThat(tested.getDie1FaceValue(), is(die2FaceValue));
 	}

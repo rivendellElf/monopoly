@@ -4,12 +4,16 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.game.monopoly.model.Monopoly;
+import com.game.monopoly.model.Player;
 import com.game.monopoly.service.PlayerService;
 
 import mockit.Injectable;
@@ -46,11 +50,12 @@ public class MonopolyGameControllerTest {
 		Monopoly setup = new Monopoly();
 		setup.setNumberOfPlayers(4);
 		setup.setNumberOfRounds(10);
+		List<Player> playerList = new ArrayList<>();
 		tested.initiate(setup);
 
 		new Verifications() {
 			{
-				playerServiceMock.rollDiceAndCalculateNewPostion(anyInt, anyInt);
+				playerServiceMock.rollDiceAndCalculateNewPostion(anyInt, playerList);
 			}
 		};
 	}
