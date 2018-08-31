@@ -11,9 +11,8 @@ public class PlayerService {
 	@Autowired
 	private Dice dice;
 
-	public void rollDice(int player, int round) {
+	public void rollDiceAndCalculateNewPostion(int player, int round) {
 		int firstDiceFaceValue = dice.getFaceValue();
 		int secondDiceFaceValue = dice.getFaceValue();
 	}
-	
 }
