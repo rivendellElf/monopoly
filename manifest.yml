@@ -1,0 +1,8 @@
+applications:
+- name: monopoly
+  path: target/monopoly-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  instances: 1
+  memory: 1G
+  env:
+    JAVA_VERSION: 1.8.0_+
