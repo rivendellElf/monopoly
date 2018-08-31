@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.game.monopoly.model.GameSetup;
+import com.game.monopoly.model.Monopoly;
 import com.game.monopoly.service.PlayerService;
 
 import mockit.Injectable;
@@ -37,20 +37,20 @@ public class MonopolyGameControllerTest {
 
 	@Test
 	public void hasPostMappingAnnotation() throws Exception {
-		assertThat(MonopolyGameController.class.getMethod("initiate", GameSetup.class).getAnnotation(PostMapping.class),
+		assertThat(MonopolyGameController.class.getMethod("initiate", Monopoly.class).getAnnotation(PostMapping.class),
 				notNullValue());
 	}
 
 	@Test
 	public void intiateRoundGivenValidInputs() throws Exception {
-		GameSetup setup = new GameSetup();
+		Monopoly setup = new Monopoly();
 		setup.setNumberOfPlayers(4);
 		setup.setNumberOfRounds(10);
 		tested.initiate(setup);
 
 		new Verifications() {
 			{
-				playerServiceMock.rollDiceAndCalculateNewPostion(setup.getNumberOfPlayers(), setup.getNumberOfRounds());
+				playerServiceMock.rollDiceAndCalculateNewPostion(anyInt, anyInt);
 			}
 		};
 	}

@@ -6,13 +6,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_EMPTY)
-public class GameSetup implements Serializable {
+public class Monopoly implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private int numberOfPlayers;
 	private int numberOfRounds;
-	private String response;
+	private Response response;
 
 	public int getNumberOfPlayers() {
 		return numberOfPlayers;
@@ -30,11 +30,11 @@ public class GameSetup implements Serializable {
 		this.numberOfRounds = numberOfRounds;
 	}
 
-	public String getResponse() {
+	public Response getResponse() {
 		return response;
 	}
 
-	public void setResponse(String response) {
+	public void setResponse(Response response) {
 		this.response = response;
 	}
 }

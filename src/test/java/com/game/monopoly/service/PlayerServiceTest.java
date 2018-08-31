@@ -3,10 +3,14 @@ package com.game.monopoly.service;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.stereotype.Service;
 
 import com.game.monopoly.component.Dice;
+import com.game.monopoly.model.Player;
 
 import mockit.Injectable;
 import mockit.Tested;
@@ -27,8 +31,8 @@ public class PlayerServiceTest {
 	@Test
 	public void rollDiceGivenPlayerAndRoundDetails() throws Exception {
 		int player = 1;
-		int round = 2;
-		tested.rollDiceAndCalculateNewPostion(player, round);
+		List<Player> playerList = new ArrayList<>();
+		tested.rollDiceAndCalculateNewPostion(player, playerList);
 		assertThat(diceMock.getFaceValue(), notNullValue());
 	}
 

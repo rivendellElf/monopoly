@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 
 import com.game.monopoly.MonopolyGameApplication;
-import com.game.monopoly.model.GameSetup;
+import com.game.monopoly.model.Monopoly;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -57,7 +57,7 @@ public class MonopolySteps {
 
 	@When("^the url is POST$")
 	public void the_url_is_url_POST() throws Throwable {
-		HttpEntity<GameSetup> entity = new HttpEntity(buildGameSetup());
+		HttpEntity<Monopoly> entity = new HttpEntity(buildGameSetup());
 		System.out.println(template);
 		ResponseEntity<String> response = template.exchange(url, HttpMethod.POST, entity, String.class);
 		System.out.println("Gul" + response);
@@ -83,8 +83,8 @@ public class MonopolySteps {
 		this.newPosition = newPosition;
 	}
 
-	private GameSetup buildGameSetup() {
-		GameSetup game = new GameSetup();
+	private Monopoly buildGameSetup() {
+		Monopoly game = new Monopoly();
 		game.setNumberOfPlayers(numberOfPlayers);
 		game.setNumberOfRounds(numberOfRounds);
 		game.setResponse(responseMessage);

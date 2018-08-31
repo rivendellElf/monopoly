@@ -14,7 +14,7 @@ public class PlayerTest {
 
 	@Test
 	public void accessPlayerId() throws Exception {
-		String playerId = "p1";
+		int playerId = 1;
 		tested.setPlayerId(playerId);
 		assertThat(tested.getPlayerId(), is(playerId));
 	}
